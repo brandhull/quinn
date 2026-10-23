@@ -5,9 +5,9 @@
   "type": "module",
   "description": "Private plain-language search over Baserow memories, all client-side",
   "scripts": {
-    "dev": "wrangler pages dev public --port 8800 --compatibility-date=2026-07-15",
+    "dev": "wrangler dev --port 8800",
     "test": "node --test test/",
-    "deploy": "wrangler pages deploy public --project-name quinn --branch main"
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
