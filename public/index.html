@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Quinn</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<div id="lock-screen" class="lock-screen hidden">
+  <form id="lock-form">
+    <h1>Quinn</h1>
+    <div id="setup-fields" class="hidden">
+      <input id="token-input" type="password" placeholder="Baserow API token (read)" autocomplete="off" />
+      <input id="table-input" type="text" inputmode="numeric" placeholder="Table ID" autocomplete="off" />
+      <input id="url-input" type="url" placeholder="https://api.baserow.io" autocomplete="off" />
+    </div>
+    <input id="pass-input" type="password" placeholder="Passphrase" autocomplete="current-password" />
+    <button type="submit" id="lock-submit">Unlock</button>
+    <p id="lock-error" class="error"></p>
+    <button type="button" id="reset-setup" class="link hidden">Reset setup</button>
+  </form>
+</div>
+
+<div id="app" class="app hidden">
+  <div id="search-shell" class="search-shell">
+    <h1 class="logo">Quinn</h1>
+    <div class="search-row">
+      <input id="search-input" type="search" placeholder="Search your memories..." class="search-box" autocomplete="off" />
+    </div>
+    <div class="controls">
+      <div id="chips" class="chips"></div>
+      <div class="mode" role="group" aria-label="Search mode">
+        <button id="mode-smart" type="button" class="active">Smart</button>
+        <button id="mode-exact" type="button">Exact</button>
+      </div>
+    </div>
+    <div id="status" class="status"></div>
+  </div>
+  <div id="results" class="results"></div>
+  <div class="footer"><button id="lock-btn" type="button" class="link">Lock</button></div>
+</div>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
